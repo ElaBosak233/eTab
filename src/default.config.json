@@ -1,0 +1,22 @@
+{
+  "background": {
+    "type": "color",
+    "value": "bg-slate-900"
+  },
+  "search": {
+    "placeholder": "搜索",
+    "origin_opacity": 0.3,
+    "focus_opacity": 1,
+    "engine": {
+      "current": "baidu",
+      "options": [
+        {
+          "name": "baidu",
+          "display_name": "百度",
+          "url": "https://www.baidu.com/s?wd="
+        }
+      ]
+    }
+  }
+
+}
