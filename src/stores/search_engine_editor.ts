@@ -9,7 +9,12 @@ type SearchEngineProfile = {
 
 const defaultState = {
 	open: false,
-	profile: {} as SearchEngineProfile
+	profile: {
+		name: "",
+		display_name: "",
+		icon: "",
+		url: ""
+	} as SearchEngineProfile
 };
 export const useSearchEngineEditorStore = defineStore("search_engine_editor", {
 	state: () => ({ ...defaultState }),

@@ -92,14 +92,12 @@ function submitSearchEngineProfile() {
 		icon: useSearchEngineEditorStore()["profile"].icon,
 		url: useSearchEngineEditorStore()["profile"].url
 	};
-	useSearchEngineEditorStore()["open"] = false;
-	useSearchEngineEditorStore()["profile"] = {};
+	useSearchEngineEditorStore().reset();
 }
 
 function deleteSearchEngineProfile() {
 	delete useSearchStore()["engine"]["options"][useSearchEngineEditorStore()["profile"].name];
-	useSearchEngineEditorStore()["profile"] = {};
-	useSearchEngineEditorStore()["open"] = false;
+	useSearchEngineEditorStore().reset();
 }
 </script>
 

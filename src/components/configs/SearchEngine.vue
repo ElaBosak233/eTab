@@ -28,15 +28,14 @@
 
 <script setup lang="ts">
 import { useSearchStore } from "@/stores/search";
-import { ref } from "vue";
 import { useCPanelStore } from "@/stores/cpanel";
 import { useSearchEngineEditorStore } from "@/stores/search_engine_editor.ts";
 
 function openSearchEngineProfile(name?: string, display_name?: string, icon?: string, url?: string) {
-	useSearchEngineEditorStore()["profile"]["name"] = name;
-	useSearchEngineEditorStore()["profile"]["display_name"] = display_name;
-	useSearchEngineEditorStore()["profile"]["icon"] = icon;
-	useSearchEngineEditorStore()["profile"]["url"] = url;
+	useSearchEngineEditorStore()["profile"]["name"] = name as string;
+	useSearchEngineEditorStore()["profile"]["display_name"] = display_name as string;
+	useSearchEngineEditorStore()["profile"]["icon"] = icon as string;
+	useSearchEngineEditorStore()["profile"]["url"] = url as string;
 	useSearchEngineEditorStore()["open"] = true;
 	useCPanelStore()["open"] = false;
 }
