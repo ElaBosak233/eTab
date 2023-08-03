@@ -2,12 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+.fadein-enter-active,
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease;
 }
 
+.fadein-enter-from,
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

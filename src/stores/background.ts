@@ -1,11 +1,17 @@
 import { defineStore } from "pinia";
-import defaultConfig from "@/default.config.json";
+
+const defaultState = {
+	type: "color",
+	value: "#0F172A"
+};
 
 export const useBackgroundStore = defineStore("background", {
-	state: () => ({
-		type: defaultConfig["background"]["type"],
-		value: defaultConfig["background"]["value"]
-	}),
+	state: () => ({ ...defaultState }),
+	actions: {
+		reset() {
+			Object.assign(this, defaultState);
+		}
+	},
 	persist: {
 		storage: localStorage,
 		key: "background"
