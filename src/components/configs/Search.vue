@@ -1,10 +1,10 @@
 <template>
 	<div>
-		<h1 class="bg-gray-200 text-lg rounded-xl px-4">搜索设置</h1>
+		<h1 class="bg-gray-200 text-lg rounded-xl px-4 text-gray-700">搜索框</h1>
 		<div class="flex mt-5 space-x-3 items-center">
 			<span class="text-sm">跳转方式</span>
 			<select
-				class="block px-2 py-1 text-gray-700 bg-white border border-gray-300 rounded-md w-32 focus:outline-none focus:ring-primary-500 focus:border-primary-500"
+				class="block px-2 py-1 text-gray-700 bg-white border border-gray-300 rounded-md w-32 focus:outline-none focus:ring-primary-500 focus:border-primary-500 text-sm"
 				v-model="useSearchStore()['blank']"
 			>
 				<option value="false">本页面</option>
@@ -40,7 +40,7 @@
 			<input type="range" min="48" max="128" step="1" v-model="useSearchStore()['height']" />
 		</div>
 		<button
-			class="absolute right-5 bottom-5 bg-blue-400 rounded-lg text-white h-8 w-16"
+			class="absolute right-5 bottom-5 bg-blue-400 hover:bg-blue-500 duration-100 rounded-lg text-white h-8 w-16"
 			@click="useSearchStore().reset()"
 		>
 			重置

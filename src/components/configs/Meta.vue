@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1 class="bg-gray-200 text-lg rounded-xl px-4">元设置</h1>
+		<h1 class="bg-gray-200 text-lg rounded-xl px-4 text-gray-700">元</h1>
 		<div class="flex mt-5 mx-2 space-x-3 items-center">
 			<span>标题</span>
 			<input
@@ -18,7 +18,7 @@
 			/>
 		</div>
 		<button
-			class="absolute right-5 bottom-5 bg-blue-400 rounded-lg text-white h-8 w-16"
+			class="absolute right-5 bottom-5 bg-blue-400 hover:bg-blue-500 duration-100 rounded-lg text-white h-8 w-16"
 			@click="useMetaStore().reset()"
 		>
 			重置

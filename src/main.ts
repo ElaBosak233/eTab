@@ -5,7 +5,7 @@ import "@/assets/css/main.scss";
 import App from "./App.vue";
 import { Icon } from "@iconify/vue";
 import welcome from "@/utils/welcome";
-import liseners from "@/utils/listeners";
+import listeners from "@/utils/listeners";
 
 welcome();
 
@@ -16,4 +16,4 @@ app.use(pinia);
 app.component("Icon", Icon);
 app.mount("#app");
 
-liseners();
+listeners();

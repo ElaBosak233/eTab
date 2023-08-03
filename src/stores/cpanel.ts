@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 
-export const usePanelStore = defineStore("panel", {
+export const useCPanelStore = defineStore("cpanel", {
 	state: () => ({
 		open: false,
 		current: "search"
