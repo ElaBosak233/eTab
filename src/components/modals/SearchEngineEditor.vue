@@ -1,9 +1,9 @@
 <template>
 	<div
 		v-if="useSearchEngineEditorStore()['open']"
-		class="items-center fixed shadow-xl bg-white p-5 rounded-lg top-1/2 left-1/2 w-96 -translate-x-1/2 -translate-y-1/2"
+		class="items-center fixed shadow-xl bg-white p-5 rounded-lg top-1/2 left-1/2 w-96 -translate-x-1/2 -translate-y-1/2 no-select"
 	>
-		<div class="flex items-center space-x-2 mb-5">
+		<div class="flex items-center space-x-2 mb-5 w-full bg-gray-200 px-3 rounded-xl">
 			<Icon icon="solar:clapperboard-edit-bold-duotone" class="h-5 w-5" />
 			<h1 class="text-xl">
 				{{

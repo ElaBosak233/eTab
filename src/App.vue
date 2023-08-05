@@ -3,6 +3,9 @@
 		<div id="searchArea" class="w-80 sm:w-1/2 lg:w-1/3">
 			<Search />
 		</div>
+		<div id="gridsArea" class="w-80 sm:w-1/2">
+			<GridPanel />
+		</div>
 		<div id="cpanelArea">
 			<button
 				id="settingButton"
@@ -33,5 +36,6 @@
 import { useCPanelStore } from "@/stores/cpanel.ts";
 import Search from "@/components/Search.vue";
 import CPanel from "@/components/CPanel.vue";
-import SearchEngineEditor from "@/components/SearchEngineEditor.vue";
+import SearchEngineEditor from "@/components/modals/SearchEngineEditor.vue";
+import GridPanel from "@/components/GridPanel.vue";
 </script>

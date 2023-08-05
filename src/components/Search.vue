@@ -16,7 +16,7 @@
 			:placeholder="useSearchStore()['placeholder']"
 			v-model="ctx"
 			v-on:keyup.enter="search()"
-			class="w-full text-base outline-none text-gray-700 py-1 leading-8 mr-2"
+			class="w-full text-base outline-none text-gray-700 py-1 leading-8 mr-2 bg-transparent"
 		/>
 		<button class="text-gray-500 hover:text-gray-700 mr-2" v-show="ctx.length" @click="clear()">
 			<Icon icon="solar:close-circle-bold" class="h-4 w-4" />
