@@ -22,6 +22,12 @@ const defaultState = {
 			icon: "https://s1.ax1x.com/2023/08/05/pPk4mVO.png"
 		},
 		{
+			name: "GitHub",
+			type: "2x1",
+			url: "https://github.com",
+			icon: "https://s1.ax1x.com/2023/08/05/pPk4mVO.png"
+		},
+		{
 			name: "哔哩哔哩",
 			type: "1x1",
 			url: "https://www.bilibili.com",

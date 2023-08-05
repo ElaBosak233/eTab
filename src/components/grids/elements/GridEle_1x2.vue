@@ -1,7 +1,8 @@
 <template>
 	<div class="col-span-1 row-span-2 flex flex-col justify-center items-center no-select space-y-1.5">
 		<button
-			class="rounded-full h-48 w-20 hover-up"
+			class="rounded-full h-48 w-20 hover-up grid-item"
+			:tabindex="index"
 			:style="{
 				background: 'image',
 				backgroundSize: 'cover',
@@ -21,6 +22,7 @@ const props = defineProps<{
 	name?: string;
 	url?: string;
 	icon?: string;
+	index?: number;
 }>();
 function jump() {
 	window.open(props.url);

@@ -44,8 +44,6 @@
 						<Icon icon="solar:programming-bold-duotone" class="w-6 h-6" />
 					</button>
 				</nav>
-				<!--				<div class="flex flex-col mt-7">-->
-				<!--				</div>-->
 			</aside>
 		</div>
 		<div class="w-80 p-5">
