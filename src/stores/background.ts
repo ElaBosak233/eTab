@@ -7,11 +7,6 @@ const defaultState = {
 
 export const useBackgroundStore = defineStore("background", {
 	state: () => ({ ...defaultState }),
-	actions: {
-		reset() {
-			Object.assign(this, defaultState);
-		}
-	},
 	persist: {
 		storage: localStorage,
 		key: "background"

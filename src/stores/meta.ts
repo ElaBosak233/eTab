@@ -6,11 +6,6 @@ const defaultState = {
 };
 export const useMetaStore = defineStore("meta", {
 	state: () => ({ ...defaultState }),
-	actions: {
-		reset() {
-			Object.assign(this, defaultState);
-		}
-	},
 	persist: {
 		storage: localStorage,
 		key: "meta"

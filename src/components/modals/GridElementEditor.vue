@@ -93,7 +93,7 @@ function submitGridElementProfile() {
 		icon: useGridElementEditorStore()["profile"].icon,
 		url: useGridElementEditorStore()["profile"].url
 	});
-	useGridElementEditorStore().reset();
+	useGridElementEditorStore().$reset();
 }
 </script>
 

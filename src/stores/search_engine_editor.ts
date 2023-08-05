@@ -1,4 +1,5 @@
 import { defineStore } from "pinia";
+import { cloneDeep } from "lodash";
 
 type SearchEngineProfile = {
 	name: string;
@@ -17,10 +18,5 @@ const defaultState = {
 	} as SearchEngineProfile
 };
 export const useSearchEngineEditorStore = defineStore("search_engine_editor", {
-	state: () => ({ ...defaultState }),
-	actions: {
-		reset() {
-			Object.assign(this, defaultState);
-		}
-	}
+	state: () => cloneDeep(defaultState)
 });

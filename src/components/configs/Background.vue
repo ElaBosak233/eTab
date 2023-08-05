@@ -22,7 +22,7 @@
 		</div>
 		<button
 			class="absolute right-5 bottom-5 bg-blue-400 hover:bg-blue-500 duration-100 rounded-lg text-white h-8 w-16"
-			@click="useBackgroundStore().reset()"
+			@click="useBackgroundStore().$reset()"
 		>
 			重置
 		</button>

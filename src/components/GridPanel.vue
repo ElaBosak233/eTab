@@ -7,7 +7,7 @@
 			ghost-class="ghost"
 			@start="drag = true"
 			@end="drag = false"
-			item-key="name"
+			:item-key="getCounter().toString()"
 		>
 			<template #item="{ element, index }">
 				<component
@@ -33,6 +33,11 @@ import { useGridElementEditorStore } from "@/stores/grid_element_editor";
 import { computed, h, ref } from "vue";
 import ContextMenu from "@imengyu/vue3-context-menu";
 import { Icon } from "@iconify/vue";
+let counter = 0;
+function getCounter() {
+	counter++;
+	return counter;
+}
 const drag = ref(false);
 const dragOptions = computed(() => ({
 	animation: 200,
@@ -74,7 +79,7 @@ oncontextmenu = function (e: MouseEvent) {
 						}
 					}),
 					onClick: () => {
-						useGridElementEditorStore().reset();
+						useGridElementEditorStore().$reset();
 						useGridElementEditorStore()["profile"] = useGridsStore()["elements"][eventTarget.tabIndex];
 						useGridElementEditorStore()["open"] = true;
 						useGridElementEditorStore()["editMode"] = true;
@@ -90,7 +95,7 @@ oncontextmenu = function (e: MouseEvent) {
 						}
 					}),
 					onClick: () => {
-						useGridElementEditorStore().reset();
+						useGridElementEditorStore().$reset();
 						deleteElement(eventTarget.tabIndex);
 					}
 				}
@@ -113,7 +118,7 @@ oncontextmenu = function (e: MouseEvent) {
 						}
 					}),
 					onClick: () => {
-						useGridElementEditorStore().reset();
+						useGridElementEditorStore().$reset();
 						useGridElementEditorStore()["open"] = true;
 						useGridElementEditorStore()["editMode"] = false;
 					}

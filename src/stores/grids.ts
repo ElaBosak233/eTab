@@ -37,11 +37,6 @@ const defaultState = {
 };
 export const useGridsStore = defineStore("grids", {
 	state: () => ({ ...defaultState }),
-	actions: {
-		reset() {
-			Object.assign(this, defaultState);
-		}
-	},
 	persist: {
 		storage: localStorage,
 		key: "grids"

@@ -1,4 +1,5 @@
 import { defineStore } from "pinia";
+import { cloneDeep } from "lodash";
 
 type GridElementProfile = {
 	name: string;
@@ -18,10 +19,5 @@ const defaultState = {
 	} as GridElementProfile
 };
 export const useGridElementEditorStore = defineStore("grid_element_editor", {
-	state: () => ({ ...defaultState }),
-	actions: {
-		reset() {
-			Object.assign(this, defaultState);
-		}
-	}
+	state: () => cloneDeep(defaultState)
 });
